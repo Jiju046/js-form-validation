@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms task</title>
+    
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <!-- body(forms) -->
+    <section id="forms">
+        <div class="bg">
+            <!-- form content -->
+                <div class="form-container">
+                
+                <h3><img class="back-button" src="./images/arrow.png" width="15px" >Details</h3>
+                
+                <form name="detailsForm">
+
+                <div class="grid-container">
+                    <!-- first name -->
+                    <div class="item1">
+                        <label for="fname">First Name <sup>*</sup></label>
+                        <input type="text" id="fname" name="fname" placeholder="First Name" class="text-box" >
+                        <p id="fname-warning" class="warning"></p>
+                    </div>
+                    <!-- last name -->
+                    <div class="item13">
+                        <label for="lname">Last Name <sup>*</sup></label>
+                        <input type="text" id="lname" name="lname" placeholder="Last Name" class="text-box">
+                        <p id="lname-warning" class="warning"></p>
+                    </div>
+                    <!-- email -->
+                    <div class="item2">
+                        <label>Email <sup>*</sup></label >
+                        <input id="email" type="email" placeholder="Email" class="text-box" >
+                        <p id="email-warning" class="warning"></p>
+                    </div>
+                    <!-- Confirm email -->
+                    <div class="item3">
+                        <label>Confirm your Email <sup>*</sup></label>
+                        <input id="cnfmEmail" type="email" placeholder="Re-enter your email" class="text-box">
+                        <p id="cnfmEmail-warning" class="warning"></p>
+
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="item4">
+                        <label style="margin-right: 20px" >Gender <sup>*</sup></label>
+                        <input type="radio" id="male" name="gender" value="male"><label for="male">Male</label><br>
+
+                        <input style="margin-left: 98px" type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
+                        <p id="gender-warning" class="warning"></p>
+                    </div>
+
+                    <!-- Skill checkbox -->
+                   
+                    <div class="item5">
+                        <label style="margin-right: 150px">Skills <sup>*</sup></label>
+                        <div>
+                        <input type="checkbox" id="tech" name="skill">
+                        <label for="tech">C</label>
+                        <input type="checkbox" id="support" name="skill">
+                        <label for="support">C++</label>
+                        <input type="checkbox" id="support" name="skill">
+                        <label for="support">JavaScript</label>
+                        <input type="checkbox" id="support" name="skill">
+                        <label for="support">Java</label>
+                        <p id="skills-warning" class="warning"></p>
+                    </div>
+                    </div>
+                    <div class="item6">
+                        <!-- color -->
+                        <label style="margin-right: 20px" >Choose a color</label>
+                        <input type="color">
+                    </div>
+
+                    <div class="degree">
+                        <label>Degree <sup>*</sup></label>
+                        <select id="select" class="text-box">
+                            <option value="">Choose</option>
+                            <option value="option1" name="degree">BE</option>
+                            <option value="option1" name="degree">BSc</option>
+                            <option value="option1" name="degree">ME</option>
+                            <option value="option1" name="degree">MSc</option>
+                        </select>
+                        <p id="degree-warning" class="warning"></p>
+                    </div>
+                    <div class="item7">
+                        <!-- Address -->
+                        <label>Address <sup>*</sup></label>
+                        <textarea id="address" name="" class="address" cols="30" rows="10"></textarea>
+                        <p id="address-warning" class="warning"></p>
+                    </div>
+                    <div class="item8">
+                        <!-- Date -->
+                        <label>Date of Birth</label>
+                        <input type="date" class="text-box">
+                    </div>
+
+                    <!-- mobile -->
+                    <div class="item9">
+                    <label>Phone<sup>*</sup></label>
+                       <input id="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="text-box">
+                       <p id="phone-warning" class="warning"></p>
+                    </div>
+
+                    <!-- upload -->
+                    <div class="upload">
+                        <label>Upload Profile Picture<sup>*</sup></label>
+                        <input type="file" id="file-input" onchange="viewFile(event)">
+                        <p><img id="image" width="100"></p>
+                        <p id="close-button" onclick="closeImage(event)">x</p>
+                        <p id="upload-warning" class="warning"></p>
+                    </div>
+
+                    <div class="item10">
+                        <!-- text area -->
+                        <label>Comments (optional)</label>
+                        <textarea name="" class="comment" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="item11">
+                        <!-- agree-->
+                        <input name="agree" type="checkbox">
+                        <label>I agree the terms and conditions <sup>*</sup></label>
+                        <p class="agree-warning" class="warning"></p>
+                    </div>
+                    <div class="item12">
+                        <!-- submit button-->
+                        <input  type="button"  class="submit-button" onclick="return formValidate()" value="Submit"></input>
+                    </div>
+                    
+                </div>
+            </form>
+            </div>
+            <!-- contact info -->
+            <div class="contact">
+
+                <div class="contact-container">
+                    <div class="social-media">
+                    <p><img src="./images/email.png" width="30px"> Contact@st.com </p>
+                    <p><img src="./images/facebook.png" width="30px"> Facebook </p>
+                    <p><img src="./images/instagram.png" width="30px"> Instagram </p>
+                    <p><img src="./images/twitter.png" width="30px"> Twitter </p>
+                    <p><img src="./images/linkedin.png" width="30px"> Linkedin </p>
+                </div>
+                <div class="contact-footer">
+                <h3>Already with us?</h3>
+                <p>Chat with us in <a style="color: #40128B">MyUser</a> and get an instant reply.</p>
+            </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    
+    </section>
+
+    <!-- footer -->
+    <section id="footer">
+        <footer>
+            <div class="footer">
+                <pre>
+            <button>Contact us</button>
+            <br>
+            ©️ copyright 2023 
+                </pre>
+                
+            </div>
+            
+        </footer>
+    </section>
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
